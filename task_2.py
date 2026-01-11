@@ -86,6 +86,7 @@ def main():
     booking_semaphore = threading.Semaphore(MAX_CONCURRENT_BOOKINGS)
 
     threads = []
+
     for i in range(8):
         seats = random.randint(1, 4)
         t = BookingThread(
